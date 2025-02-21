@@ -7,6 +7,8 @@
 
 ![image.png](./screenshot.png)
 
+主题站点：[https://blog.lovefc.cn](https://blog.lovefc.cn)
+
 ## ✨ 主题特性
   - 无干扰的极简布局
   - 自适应宽屏/窄屏显示
@@ -20,5 +22,7 @@
 2. 解压至 `/usr/themes/` 目录
 3. 后台启用主题
 
+
 ## 📄 开源协议
+
 本项目基于 MIT License 开源，2025 © lovefc
