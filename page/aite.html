@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #0073e6;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .email-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .email-body {
+            padding: 20px;
+            color: #333333;
+        }
+        .email-body h2 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .email-body p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .comment-details {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .comment-details p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .email-footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #f1f1f1;
+            font-size: 14px;
+            color: #666666;
+        }
+        .email-footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .email-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- 邮件头部 -->
+        <div class="email-header">
+            <h1>您有一条新回复</h1>
+        </div>
+
+        <!-- 邮件正文 -->
+        <div class="email-body">
+            <p>以下是回复的详细信息：</p>
+
+            <div class="comment-details">
+                <p><strong>回复内容：</strong> {{commentContent}}</p>
+                <p><strong>回复时间：</strong> {{commentTime}}</p>
+                <p><strong>文章标题：</strong> {{postTitle}}</p>
+                <p><strong>文章链接：</strong> <a href="{{postLink}}" target="_blank" rel="noopener noreferrer">点击查看</a></p>
+            </div>
+        </div>
+
+        <!-- 邮件尾部 -->
+        <div class="email-footer">
+            <p>这是系统自动发送的邮件，请勿直接回复。</p>
+        </div>
+    </div>
+</body>
+</html>
