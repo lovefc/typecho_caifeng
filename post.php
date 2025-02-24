@@ -38,12 +38,14 @@
         <?php $this->content(); ?>
       </div>
       <div class="author-info">
-        <p><span style="color:rgba(0, 0, 0, .3);"><?php _e('发布时间：'); ?><?php $this->date('Y-m-d h:i:s'); ?></span></p>
+        <p><span style="color:rgba(0, 0, 0, .3);"><?php _e('发布时间：'); ?><?php $this->date('Y-m-d H:i:s'); ?></span></p>
       </div>
       <?php
       $currentPage = max(1, (int)$this->request->get('page', 1));
       $commentsData = getCurrentPostComments($currentPage, 5, function ($comment) {
-        $comment['time'] = date('Y-m-d H:i', $comment['created'] + 8 * 3600);
+        $options = Typecho_Widget::widget('Widget_Options');
+        $timezone = $options->timezone;  
+        $comment['time'] = date('Y-m-d H:i:s', $comment['created']+$timezone);
         $comment['url'] = $comment['url'] ? htmlspecialchars($comment['url']) : '#';
         return $comment;
       });
