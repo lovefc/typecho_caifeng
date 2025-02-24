@@ -463,7 +463,7 @@ function sendMail($comment, $post)
     $text = $comment['text'] ?? null;
     $author = $comment['author'] ?? null;
     $time = date("Y-m-d H:i:s");
-    $postLink = $comment['permalink'] ?? null;
+    $postLink = $post->permalink ?? null;
     $blogLink = Helper::options()->siteUrl;
     $siteName = Helper::options()->title;
     $tomail = Helper::options()->emailAddress;
