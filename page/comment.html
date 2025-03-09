@@ -70,15 +70,11 @@
 </head>
 <body>
     <div class="email-container">
-        <!-- 邮件头部 -->
         <div class="email-header">
             <h1>您有一条新评论</h1>
         </div>
-
-        <!-- 邮件正文 -->
         <div class="email-body">
             <p>以下是评论的详细信息：</p>
-
             <div class="comment-details">
                 <p><strong>评论者：</strong> {{commentAuthor}}</p>
                 <p><strong>评论内容：</strong> {{commentContent}}</p>
@@ -87,11 +83,8 @@
                 <p><strong>文章链接：</strong> <a href="{{postLink}}" target="_blank" rel="noopener noreferrer">点击查看</a></p>
             </div>
         </div>
-
-        <!-- 邮件尾部 -->
         <div class="email-footer">
             <p>这是系统自动发送的邮件，请勿直接回复。</p>
-            <p>如需管理评论，请访问 <a href="{{blogLink}}" target="_blank" rel="noopener noreferrer">博客后台</a>。</p>
         </div>
     </div>
 </body>

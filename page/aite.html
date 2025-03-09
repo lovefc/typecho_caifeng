@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>新回复通知</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -69,15 +70,11 @@
 </head>
 <body>
     <div class="email-container">
-        <!-- 邮件头部 -->
         <div class="email-header">
             <h1>您有一条新回复</h1>
         </div>
-
-        <!-- 邮件正文 -->
         <div class="email-body">
             <p>以下是回复的详细信息：</p>
-
             <div class="comment-details">
                 <p><strong>回复内容：</strong> {{commentContent}}</p>
                 <p><strong>回复时间：</strong> {{commentTime}}</p>
@@ -85,8 +82,6 @@
                 <p><strong>文章链接：</strong> <a href="{{postLink}}" target="_blank" rel="noopener noreferrer">点击查看</a></p>
             </div>
         </div>
-
-        <!-- 邮件尾部 -->
         <div class="email-footer">
             <p>这是系统自动发送的邮件，请勿直接回复。</p>
         </div>

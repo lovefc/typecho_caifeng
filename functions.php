@@ -462,7 +462,9 @@ function sendMail($comment, $post)
     $title = $post->title;
     $text = $comment['text'] ?? null;
     $author = $comment['author'] ?? null;
-    $time = date("Y-m-d H:i:s");
+	$options = Typecho_Widget::widget('Widget_Options');
+    $timezone = $options->timezone;
+    $time = date('Y-m-d H:i:s', time()+$timezone);
     $postLink = $post->permalink ?? null;
     $blogLink = Helper::options()->siteUrl;
     $siteName = Helper::options()->title;

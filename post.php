@@ -7,23 +7,15 @@
 <?php endif; ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <style>
-  /* 强制代码块换行 */
   pre code.hljs {
     white-space: pre-wrap;
-    /* 保留空白符，但允许换行 */
     word-wrap: break-word;
-    /* 允许单词内换行 */
     overflow-x: auto;
-    /* 如果内容过长，显示水平滚动条 */
   }
-
-  /* 移动设备适配 */
   @media (max-width: 768px) {
     pre code.hljs {
       white-space: pre-wrap;
-      /* 在移动设备上强制换行 */
       word-break: break-all;
-      /* 强制所有内容换行 */
     }
   }
 </style>

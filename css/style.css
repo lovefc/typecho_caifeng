@@ -266,7 +266,7 @@ ul.categories li {
 }
 
 .content-detail table {
-    font-size: 12px;
+    font-size: 14px;
     width: 100vw;
     max-width: 100%;
     overflow: auto;
@@ -282,6 +282,12 @@ ul.categories li {
 .content-detail th {
     padding: 12px 7px;
     line-height: 24px;
+}
+
+.content-detail td {
+    padding: 12px 7px;
+    line-height: 24px;
+	font-size: 13px;
 }
 
 .content-page .container {
